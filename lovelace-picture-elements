@@ -1,0 +1,189 @@
+type: picture-elements
+image: https://sysadm.cz/public/images/toyota_corolla.png # better way is use local files
+dark_mode_image: https://sysadm.cz/public/images/toyota_corolla_black.png # better way is use local files
+elements:
+  - type: state-label
+    entity: sensor.corolla_hb_ts_numberplate
+    attribute: modelName
+    style:
+      top: 11%
+      left: 17%
+      font-size: 18px
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_over_all_status
+    style:
+      top: 11%
+      left: 36%
+      '--paper-item-icon-color': green
+      '--paper-item-icon-active-color': red
+  - type: state-label
+    entity: sensor.corolla_hb_ts_odometer
+    style:
+      top: 16%
+      left: 55%
+      font-size: 18px
+  - type: state-label
+    entity: sensor.corolla_hb_ts_fuel_tank
+    style:
+      top: 16%
+      left: 76%
+      font-size: 18px
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_trunk_door
+    style:
+      top: 16%
+      left: 86%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_trunk_lock
+    style:
+      top: 16%
+      left: 92%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_driverseat_lock
+    style:
+      top: 25%
+      left: 4%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_driverseat_window
+    style:
+      top: 35%
+      left: 4%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_driverseat_door
+    style:
+      top: 45%
+      left: 4%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_leftrearseat_door
+    style:
+      top: 60%
+      left: 4%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_leftrearseat_window
+    style:
+      top: 70%
+      left: 4%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_key_in_car
+    style:
+      top: 25%
+      left: 27%
+      '--paper-item-icon-color': steelblue
+      '--paper-item-icon-active-color': green
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_passengerseat_window
+    style:
+      top: 35%
+      left: 27%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_passengerseat_door
+    style:
+      top: 45%
+      left: 27%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_rightrearseat_door
+    style:
+      top: 60%
+      left: 27%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_rightrearseat_window
+    style:
+      top: 70%
+      left: 27%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_front_lights
+    style:
+      top: 34%
+      left: 53%
+      '--paper-item-icon-color': black
+      '--paper-item-icon-active-color': yellow
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_back_lights
+    style:
+      top: 65%
+      left: 53%
+      '--paper-item-icon-color': black
+      '--paper-item-icon-active-color': red
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_hood
+    style:
+      top: 35%
+      left: 95%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_trunk_door
+    style:
+      top: 59%
+      left: 95%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-icon
+    entity: binary_sensor.corolla_hb_ts_trunk_lock
+    style:
+      top: 69%
+      left: 95%
+      '--paper-item-icon-color': crimson
+      '--paper-item-icon-active-color': steelblue
+  - type: state-label
+    entity: sensor.corolla_hb_ts_current_month_statistics
+    attribute: Total_driving_time
+    style:
+      top: 96%
+      left: 8%
+      font-size: 10px
+  - type: state-label
+    entity: sensor.corolla_hb_ts_current_month_statistics
+    style:
+      top: 96%
+      left: 27%
+      font-size: 10px
+  - type: state-label
+    entity: sensor.corolla_hb_ts_current_month_statistics
+    attribute: Average_fuel_consumed
+    style:
+      top: 96%
+      left: 44%
+      font-size: 10px
+  - type: state-label
+    entity: sensor.corolla_hb_ts_current_year_statistics
+    attribute: Total_driving_time
+    style:
+      top: 96%
+      left: 59%
+      font-size: 10px
+  - type: state-label
+    entity: sensor.corolla_hb_ts_current_year_statistics
+    style:
+      top: 96%
+      left: 78%
+      font-size: 10px
+  - type: state-label
+    entity: sensor.corolla_hb_ts_current_year_statistics
+    attribute: Average_fuel_consumed
+    style:
+      top: 96%
+      left: 95%
+      font-size: 10px
