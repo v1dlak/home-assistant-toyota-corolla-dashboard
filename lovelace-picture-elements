@@ -12,6 +12,7 @@ elements:
   - type: state-icon
     entity: sensor.corolla_hb_ts_vehicle_identify_number
     attribute: vehicle_status
+    icon: mdi:car
     style:
       top: 11%
       left: 36%
@@ -51,6 +52,7 @@ elements:
       '--paper-item-icon-active-color': steelblue
   - type: state-icon
     entity: binary_sensor.corolla_hb_ts_driverseat_window
+    icon: mdi:window-closed
     style:
       top: 35%
       left: 4%
@@ -72,6 +74,7 @@ elements:
       '--paper-item-icon-active-color': steelblue
   - type: state-icon
     entity: binary_sensor.corolla_hb_ts_leftrearseat_window
+    icon: mdi:window-closed
     style:
       top: 70%
       left: 4%
@@ -80,6 +83,7 @@ elements:
   - type: state-icon
     entity: sensor.corolla_hb_ts_vehicle_identify_number
     attribute: smart_key_status
+    icon: mdi:car-key
     style:
       top: 25%
       left: 27%
@@ -87,6 +91,7 @@ elements:
       '--paper-item-icon-active-color': crimson
   - type: state-icon
     entity: binary_sensor.corolla_hb_ts_passengerseat_window
+    icon: mdi:window-closed
     style:
       top: 35%
       left: 27%
@@ -108,6 +113,7 @@ elements:
       '--paper-item-icon-active-color': steelblue
   - type: state-icon
     entity: binary_sensor.corolla_hb_ts_rightrearseat_window
+    icon: mdi:window-closed
     style:
       top: 70%
       left: 27%
