@@ -3,14 +3,15 @@ image: https://sysadm.cz/public/images/toyota_corolla.png # better way is use lo
 dark_mode_image: https://sysadm.cz/public/images/toyota_corolla_black.png # better way is use local files
 elements:
   - type: state-label
-    entity: sensor.corolla_hb_ts_numberplate
-    attribute: modelName
+    entity: sensor.corolla_hb_ts_vehicle_identify_number
+    attribute: Car_line_name
     style:
       top: 11%
       left: 17%
       font-size: 18px
   - type: state-icon
-    entity: binary_sensor.corolla_hb_ts_over_all_status
+    entity: sensor.corolla_hb_ts_vehicle_identify_number
+    attribute: vehicle_status
     style:
       top: 11%
       left: 36%
@@ -23,22 +24,21 @@ elements:
       left: 55%
       font-size: 18px
   - type: state-label
-    entity: sensor.corolla_hb_ts_fuel_tank
+    entity: sensor.corolla_hb_ts_fuel_level
     style:
       top: 16%
-      left: 76%
+      left: 77%
       font-size: 18px
-  - type: state-icon
-    entity: binary_sensor.corolla_hb_ts_trunk_door
+  - type: state-label
+    entity: sensor.corolla_hb_ts_fuel_range
     style:
       top: 16%
-      left: 86%
-      '--paper-item-icon-color': crimson
-      '--paper-item-icon-active-color': steelblue
+      left: 90%
+      font-size: 18px
   - type: state-icon
     entity: binary_sensor.corolla_hb_ts_trunk_lock
     style:
-      top: 16%
+      top: 6%
       left: 92%
       '--paper-item-icon-color': crimson
       '--paper-item-icon-active-color': steelblue
@@ -78,12 +78,13 @@ elements:
       '--paper-item-icon-color': crimson
       '--paper-item-icon-active-color': steelblue
   - type: state-icon
-    entity: binary_sensor.corolla_hb_ts_key_in_car
+    entity: sensor.corolla_hb_ts_vehicle_identify_number
+    attribute: smart_key_status
     style:
       top: 25%
       left: 27%
-      '--paper-item-icon-color': steelblue
-      '--paper-item-icon-active-color': green
+      '--paper-item-icon-color': green
+      '--paper-item-icon-active-color': crimson
   - type: state-icon
     entity: binary_sensor.corolla_hb_ts_passengerseat_window
     style:
@@ -113,20 +114,6 @@ elements:
       '--paper-item-icon-color': crimson
       '--paper-item-icon-active-color': steelblue
   - type: state-icon
-    entity: binary_sensor.corolla_hb_ts_front_lights
-    style:
-      top: 34%
-      left: 53%
-      '--paper-item-icon-color': black
-      '--paper-item-icon-active-color': yellow
-  - type: state-icon
-    entity: binary_sensor.corolla_hb_ts_back_lights
-    style:
-      top: 65%
-      left: 53%
-      '--paper-item-icon-color': black
-      '--paper-item-icon-active-color': red
-  - type: state-icon
     entity: binary_sensor.corolla_hb_ts_hood
     style:
       top: 35%
@@ -134,7 +121,7 @@ elements:
       '--paper-item-icon-color': crimson
       '--paper-item-icon-active-color': steelblue
   - type: state-icon
-    entity: binary_sensor.corolla_hb_ts_trunk_door
+    entity: binary_sensor.corolla_hb_ts_trunk
     style:
       top: 59%
       left: 95%
@@ -149,7 +136,7 @@ elements:
       '--paper-item-icon-active-color': steelblue
   - type: state-label
     entity: sensor.corolla_hb_ts_current_month_statistics
-    attribute: Total_driving_time
+    attribute: Duration
     style:
       top: 96%
       left: 8%
@@ -169,7 +156,7 @@ elements:
       font-size: 10px
   - type: state-label
     entity: sensor.corolla_hb_ts_current_year_statistics
-    attribute: Total_driving_time
+    attribute: Duration
     style:
       top: 96%
       left: 59%
